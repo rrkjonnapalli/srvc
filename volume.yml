@@ -1,0 +1,9 @@
+version: '3.1'
+services:
+  pg:
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+
+  mongo:
+    volumes:
+      - ./data/mongo:/data/db

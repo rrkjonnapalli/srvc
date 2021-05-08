@@ -1,0 +1,18 @@
+version: '3.1'
+services: 
+    pg:
+        container_name: pg
+        build: 
+            context: build/postgres
+    
+    mongo:
+        container_name: mongo
+        build: 
+            context: build/mongo
+    
+    kc:
+        container_name: kc
+        build:
+            context: build/keycloak
+        depends_on: 
+            - pg
